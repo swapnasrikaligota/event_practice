@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Event Practice</h1>
+
+    
+    <form id="myForm">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Keyboard Event
+       document.addEventListener('keydown', (event) => {
+         console.log(Key pressed: ${event.key});
+        });
+
+        // Form Event
+       document.getElementById('myForm').addEventListener('submit', (event) => {
+         event.preventDefault();
+            console.log('submitted');
+        });
+
+        // Window Event
+        window.addEventListener('adjust', () => {
+            console.log(alert('Window adjusted'));
+        });
+    </script>
+</body>
+</html>
